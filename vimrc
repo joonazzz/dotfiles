@@ -33,7 +33,7 @@ set ofu=syntaxcomplete#Complete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256 " enable 256-color mode.
 syntax enable " enable syntax highlighting (previously syntax on).
-colorscheme desert" set colorscheme
+colorscheme desert " set colorscheme
 
 " Highlight characters that go over 80 columns
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
