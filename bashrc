@@ -108,3 +108,10 @@ alias ylex="cvlc http://www.yle.fi/livestream/ylex.asx"
 alias vtrance="cvlc ~/Downloads/listen.pls"
 
 alias jvenice="ssh joonas@joonas-venice.no-ip.org -p 21286"
+
+
+# Diplomityö shortcutit
+alias dippa_doc="cd ~/Dropbox/Dippa2/doc/latex_template/dtyo-template"
+alias dippa_scr="cd ~/Dippa2/src/UnipenHWR"
+
+
