@@ -10,6 +10,10 @@
 " 03. Theme/Colors ............ Colors, fonts, etc. "
 " 04. Vim UI .................. User interface behavior "
 " 05. Text Formatting/Layout .. Text, tab, indentation related "
+" 06. Custom keybindings....... <space> for za etc.. "
+" 07. Latex Settings
+" 08. NetRW settings
+"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -65,18 +69,28 @@ set smarttab " use tabs at the start of a line, spaces elsewhere
 set nowrap " don't wrap text
 
 
-" vim-latex settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 06. Custom keybindings"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" These two commands collide a little. 
+" nnoremap <space> za  " Space is more convenient in folding
+map <CR> O<Esc> " Enter works in normal mode
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 07. Latex settings"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
-" FIXME: how to get latex soute to compile \ll and view \lv automatically
-" to PDF!!
 let g:TexDefaultTargetFormat='pdf'  " Compile to pdf in default
-"let g:Tex_CompileRule_pdf "pdflatex -interaction='nonstopmode' $*"
 let g:Tex_ViewRule_pdf='evince'     " Use evince for viewing pdf
 
-" NetRW settings
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 08. NetRW settings"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:netrw_browse_split=4
 
 
