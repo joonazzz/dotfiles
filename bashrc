@@ -108,6 +108,6 @@ alias ylex="cvlc http://www.yle.fi/livestream/ylex.asx"
 
 # Diplomityö shortcutit
 alias dippa_doc="cd ~/Dropbox/Dippa2/doc/latex_template/dtyo-template"
-alias dippa_scr="cd ~/Dropbox/Dippa2/src/UnipenHWR"
+alias dippa_src="cd ~/Dropbox/Dippa2/src/UnipenHWR"
 
 
