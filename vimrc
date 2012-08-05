@@ -13,6 +13,7 @@
 " 06. Custom keybindings....... <space> for za etc.. "
 " 07. Latex Settings
 " 08. NetRW settings
+" 09. VimWiki 
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -92,5 +93,22 @@ let g:Tex_ViewRule_pdf='evince'     " Use evince for viewing pdf
 " 08. NetRW settings"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:netrw_browse_split=4
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 09. VimWiki "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vimwiki_auto_checkbox=1 " If on, creates checkbox while toggling list item
+                              " , that is pressing C-<space>
+
+" List of wikis, their paths and options
+let wiki_1 = {}
+let wiki_1.path = '~/Dropbox/private/mywiki/'
+let wiki_1.path_html = '~/Dropbox/private/mywiki/html/'
+
+let g:vimwiki_list = [wiki_1]
+
+
+
+
 
 
