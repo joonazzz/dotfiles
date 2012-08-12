@@ -106,7 +106,7 @@ let wiki_1.path = '~/Dropbox/private/mywiki/'
 let wiki_1.path_html = '~/Dropbox/private/mywiki/html/'
 
 let g:vimwiki_list = [wiki_1]
-
+autocmd FileType vimwiki set tw=80
 
 
 
