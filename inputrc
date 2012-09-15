@@ -1,0 +1,4 @@
+# Disable annoying bell on Debian
+set bell-style none
+
+
