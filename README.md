@@ -4,7 +4,10 @@ dotfiles
 Collection of my precious dotfiles
 * vimrc
 * bashrc
-
+* screenrc
+* inputrc
+* emacs
+* ... etc?
 
 
 
