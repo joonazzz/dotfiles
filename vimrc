@@ -14,6 +14,7 @@
 " 07. Latex Settings
 " 08. NetRW settings
 " 09. VimWiki 
+" 10. Vundle .................. Vim plugin management
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -21,6 +22,7 @@
 " 01. General "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible " get rid of Vi compatibility mode. SET FIRST!
+set autowrite    
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 02. Events "
@@ -56,6 +58,10 @@ set ignorecase " Make searches case-insensitive.
 set ruler " Always show info along bottom.
 set showmatch
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
+
+" set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 05. Text Formatting/Layout "
@@ -109,6 +115,56 @@ let g:vimwiki_list = [wiki_1]
 autocmd FileType vimwiki set tw=80
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 10. Vundle - Vim plugin management "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle, required! 
+Bundle 'gmarik/vundle'
+
+" Information management
+Bundle 'vimwiki'
+Bundle 'https://github.com/vim-scripts/calendar.vim--Matsumoto.git'
+
+" Project navigation
+" http://amix.dk/blog/post/19329
+" 1. sudo apt-get install
+Bundle 'taglist.vim'
+
+" Buffer navigation
+" Bundle 'bufexplorer.zip'
+Bundle 'buffergrep'
+Bundle 'Buffergator'
 
 
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 11. Taglist  
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_WinWidth = 50
+map <F4> :TlistToggle<cr>
+map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 12. BufExplorer  
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <silent> <M-F12> :BufExplorer<CR>
+nnoremap <silent> <F12> :bn<CR>
+nnoremap <silent> <S-F12> :bp<CR>
 
