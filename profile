@@ -23,7 +23,10 @@ fi
 
 # set PATH to android sdk tools if it exists
 if [ -d "$HOME/android-sdk-linux/tools" ] ; then
+    echo "Setting path to android sdk"
+    echo $PATH
     PATH="$HOME/android-sdk-linux/tools:$PATH"
+    echo $PATH
 fi
 
 

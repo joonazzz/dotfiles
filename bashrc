@@ -95,23 +95,16 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.profile ]; then
+    . ~/.profile
+fi
+
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-# Some aliases by me (Joonas)
-alias radiorock="cvlc http://stream.radiorock.fi/listen.pls"
-alias ylex="cvlc http://www.yle.fi/livestream/ylex.asx"
-
-# Diplomityö shortcutit
-alias dippa_doc="cd ~/Dropbox/Dippa2/doc/latex_template/dtyo-template"
-alias dippa_src="cd ~/Dropbox/Dippa2/src/UnipenHWR"
-
-#Boot shortcuts
-alias windows_boot='sudo grub-reboot "Windows 7 (loader) (on /dev/sda4)" && sudo reboot'
-alias linux_boot='sudo grub-reboot "Linux Mint 13 MATE 64-bit, 3.2.0-32-generic (/dev/sda2)" && sudo reboot'
 
 
