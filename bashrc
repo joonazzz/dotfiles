@@ -90,21 +90,29 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
+    echo "reading bash_aliases"
     . ~/.bash_aliases
 fi
 
-if [ -f ~/.profile ]; then
-    . ~/.profile
-fi
+#if [ -f ~/.profile ]; then
+#    echo "reading profile"
+#    . ~/.profile
+#fi
 
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    echo "reading bash_completion"
     . /etc/bash_completion
 fi
 
+if [ -d "$HOME/android-sdk-linux/platform-tools" ] ; then
+        echo "Setting path to android sdk"
+        echo $PATH
+        PATH="$HOME/android-sdk-linux/platform-tools:$PATH"
+        echo $PATH
+fi
 
