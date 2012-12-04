@@ -116,3 +116,4 @@ if [ -d "$HOME/android-sdk-linux/platform-tools" ] ; then
         echo $PATH
 fi
 
+clear
