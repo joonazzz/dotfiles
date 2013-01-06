@@ -23,7 +23,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible " get rid of Vi compatibility mode. SET FIRST!
 set autowrite    
-
+set clipboard=unnamedplus
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 02. Events "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -139,6 +139,7 @@ Bundle 'taglist.vim'
 Bundle 'buffergrep'
 Bundle 'Buffergator'
 
+Bundle 'The-NERD-Commenter'
 
 "
 " Brief help
