@@ -24,6 +24,9 @@
 set nocompatible " get rid of Vi compatibility mode. SET FIRST!
 set autowrite    
 set clipboard=unnamedplus
+" set clipboard=unnamedplus " copy to unnamed register
+" set go+=a             " visual selection copies to clipboard
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 02. Events "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
