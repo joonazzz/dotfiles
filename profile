@@ -9,12 +9,12 @@
 #umask 022
 
 # if running bash
-if [ -n "$BASH_VERSION" ]; then
+#if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
+#    if [ -f "$HOME/.bashrc" ]; then
+#	. "$HOME/.bashrc"
+#    fi
+#fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
@@ -23,11 +23,21 @@ fi
 
 # set PATH to android sdk tools if it exists
 if [ -d "$HOME/android-sdk-linux/tools" ] ; then
-    echo "Setting path to android sdk"
-    echo $PATH
+    echo "Setting path to android sdk tools..."
     PATH="$HOME/android-sdk-linux/tools:$PATH"
-    echo $PATH
 fi
+
+if [ -d "$HOME/android-sdk-linux/platform-tools" ] ; then
+    echo "Setting path to android sdk platform-tools..."
+    PATH="$HOME/android-sdk-linux/platform-tools:$PATH"
+fi
+
+# set PATH to android ndk tools if it exists
+if [ -d "$HOME/android-ndk-r8c" ] ; then
+    echo "Setting path to android ndk..."
+    PATH="$HOME/android-ndk-r8c:$PATH"
+fi
+
 
 
 

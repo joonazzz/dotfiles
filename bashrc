@@ -92,10 +92,12 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
+    echo "Reading bash_aliases..."
     . ~/.bash_aliases
 fi
 
 if [ -f ~/.profile ]; then
+    echo "Reading profile..."
     . ~/.profile
 fi
 
@@ -104,7 +106,9 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    echo "Reading bash_completion..."
     . /etc/bash_completion
 fi
 
+clear
 
