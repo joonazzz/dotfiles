@@ -84,9 +84,27 @@ set nowrap " don't wrap text
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " These two commands collide a little. 
 " nnoremap <space> za  " Space is more convenient in folding
-map <CR> O<Esc> " Enter works in normal mode
 
+" Set leader key to - which is easier to type
+let mapleader="-"
 
+" Enter will add a new line in normal mode
+" map <CR> O<Esc> " Messes up quickfix window!!
+
+" Use ctrl-s for easy saving
+nmap <c-s> :w<CR>
+imap <c-s> <Esc><c-s>
+
+" Use ctrl-b for buid
+nmap <c-b> :make<CR>
+
+" C-space for omni completion
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+\ "\<lt>C-n>" :
+\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 07. Latex settings"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
