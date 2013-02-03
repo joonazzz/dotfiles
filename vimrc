@@ -132,17 +132,12 @@ Bundle 'gmarik/vundle'
 Bundle 'vimwiki'
 Bundle 'https://github.com/vim-scripts/calendar.vim--Matsumoto.git'
 
-" Project navigation
-" http://amix.dk/blog/post/19329
-" 1. sudo apt-get install
-Bundle 'taglist.vim'
-
 " Buffer navigation
-" Bundle 'bufexplorer.zip'
-Bundle 'buffergrep'
-Bundle 'Buffergator'
+Bundle 'taglist.vim'
+Bundle 'The-NERD-tree'
 
-Bundle 'The-NERD-Commenter'
+" Snippets
+Bundle 'snipMate'
 
 "
 " Brief help
@@ -172,3 +167,8 @@ nnoremap <silent> <M-F12> :BufExplorer<CR>
 nnoremap <silent> <F12> :bn<CR>
 nnoremap <silent> <S-F12> :bp<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 13. NERDtree  
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <F3> :NERDTreeToggle<cr>
