@@ -153,9 +153,11 @@ Bundle 'https://github.com/vim-scripts/calendar.vim--Matsumoto.git'
 " Buffer navigation
 Bundle 'taglist.vim'
 Bundle 'The-NERD-tree'
+Bundle 'minibufexpl.vim'
 
 " Snippets
 Bundle 'snipMate'
+
 
 "
 " Brief help
