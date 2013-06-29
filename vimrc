@@ -23,7 +23,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible " get rid of Vi compatibility mode. SET FIRST!
 set autowrite    
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 " set clipboard=unnamedplus " copy to unnamed register
 " set go+=a             " visual selection copies to clipboard
 
@@ -69,7 +69,8 @@ set guioptions-=r  "remove right-hand scroll bar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 05. Text Formatting/Layout "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set autoindent " auto-indent
+" set autoindent " auto-indent
+set cindent         " see :h cindent, is more clever than autoindent & smartindent
 set tabstop=4 " tab spacing
 set softtabstop=4 " unify
 set shiftwidth=4 " indent/outdent by 4 columns
@@ -88,6 +89,9 @@ set nowrap " don't wrap text
 " Set leader key to - which is easier to type
 let mapleader="-"
 
+" Easy shortcut for editihg vimrc
+nmap <leader>vrc :e ~/.vimrc<CR>
+
 " Enter will add a new line in normal mode
 " map <CR> O<Esc> " Messes up quickfix window!!
 
@@ -95,7 +99,7 @@ let mapleader="-"
 nmap <c-s> :w<CR>
 imap <c-s> <Esc><c-s>
 
-" Use ctrl-b for buid
+" Use ctrl-b for build
 nmap <c-b> :make<CR>
 
 " C-space for omni completion
@@ -157,6 +161,8 @@ Bundle 'The-NERD-tree'
 " Snippets
 Bundle 'snipMate'
 
+" Source code formatting
+Bundle "Chiel92/vim-autoformat"
 "
 " Brief help
 " :BundleList          - list configured bundles
@@ -190,3 +196,9 @@ nnoremap <silent> <S-F12> :bp<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map <F3> :NERDTreeToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-autoformat  
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+noremap <C-a><C-f> :Autoformat<CR><CR>
