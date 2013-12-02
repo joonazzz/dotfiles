@@ -158,6 +158,9 @@ Bundle 'minibufexpl.vim'
 " Snippets
 Bundle 'snipMate'
 
+" Python setup: http://unlogic.co.uk/posts/vim-python-ide.html 
+" - lint, code completion, documentation lookup, refactoring, etc...
+Bundle 'klen/python-mode'
 
 "
 " Brief help
@@ -192,3 +195,5 @@ nnoremap <silent> <S-F12> :bp<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map <F3> :NERDTreeToggle<cr>
+
+
