@@ -117,5 +117,12 @@ if [ -d "$HOME/android-sdk-linux/platform-tools" ] ; then
         echo $PATH
 fi
 
+
 clear
+
+# Speed up android builds
+export USE_CCACHE=1
+PATH=~bin:$PATH
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/usr/local/lib"
 

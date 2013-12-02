@@ -162,13 +162,12 @@ Bundle 'minibufexpl.vim'
 " Snippets
 Bundle 'snipMate'
 
-" Python setup: http://unlogic.co.uk/posts/vim-python-ide.html 
-" - lint, code completion, documentation lookup, refactoring, etc...
-Bundle 'klen/python-mode'
-
-=======
+<<<<<<< HEAD
 " Source code formatting
 Bundle "Chiel92/vim-autoformat"
+=======
+
+>>>>>>> d9bec18068fe2cba63bcad66f583e75560d2da1f
 "
 " Brief help
 " :BundleList          - list configured bundles
@@ -204,10 +203,7 @@ nnoremap <silent> <S-F12> :bp<CR>
 map <F3> :NERDTreeToggle<cr>
 
 
-<<<<<<< HEAD
-=======
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim-autoformat  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <C-a><C-f> :Autoformat<CR><CR>
->>>>>>> 5242c230c09b7192db50117a19485a7b8600593f
