@@ -166,7 +166,6 @@ Bundle 'snipMate'
 " - lint, code completion, documentation lookup, refactoring, etc...
 Bundle 'klen/python-mode'
 
-=======
 " Source code formatting
 Bundle "Chiel92/vim-autoformat"
 "
