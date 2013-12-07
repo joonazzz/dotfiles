@@ -126,3 +126,6 @@ PATH=~bin:$PATH
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/usr/local/lib"
 
+# Try vim bindings on bash...
+set -o vi
+
