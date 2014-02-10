@@ -162,6 +162,10 @@ Bundle 'minibufexpl.vim'
 " Snippets
 Bundle 'snipMate'
 
+" Python setup: http://unlogic.co.uk/posts/vim-python-ide.html 
+" - lint, code completion, documentation lookup, refactoring, etc...
+Bundle 'klen/python-mode'
+
 " Source code formatting
 Bundle "Chiel92/vim-autoformat"
 "
