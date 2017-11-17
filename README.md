@@ -1,9 +1,1 @@
-dotfiles
-========
-
-* vimrc
-* bashrc
-* screenrc
-* inputrc
-* emacs
-etc...
+Repository for maintaining my common dotfiles and settings.
